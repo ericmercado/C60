@@ -1,105 +1,116 @@
-{
+html, body {
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
-header
-{
-    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(danktrees.jpg);
+body {
+    font-family: "Helvetica Neue",sans-serif;
+    font-weight: lighter;
+}
+
+header {
+    width: 100%;
     height: 100vh;
-    background-size:cover;
-    background-position: center;
+    background: url(danktrees.jpg) no-repeat 50% 50%;
+    background-size: cover;
 }
 
-.main-nav
-{
-    float:right;
+.content {
+    width: 94%;
+    margin: 4em auto;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.logo {
+    line-height: 60px;
+    position: fixed;
+    float: left;
+    margin: 16px 46px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    line-height: 60px;
+}
+
+nav ul {
+    line-height: 60px;
     list-style: none;
-    margin-top: 30px;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    color: #fff;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    padding-right: 40px;
+    transition: 1s;
 }
 
-.main-nav li
-{
-    display:inline-block;
+nav.black ul {
+    background: #000;
 }
 
-.main-nav li a
-{
-    color:white;
+nav ul li {
+    display: inline-block;
+    padding: 16px 40px;;
+}
+
+nav ul li a {
     text-decoration: none;
-    padding: 5px 20px;
-    font-family: "Roboto", sans-serif;
-    font-size: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
 }
 
-.main-nav li a:hover
-{
-    border: 1px solid white;
+.menu-icon {
+    line-height: 60px;
+    width: 100%;
+    background: #000;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 15px 24px;
+    cursor: pointer;
+    color: #fff;
+    display: none;
 }
 
+@media(max-width: 786px) {
 
+    .logo {
+          position: fixed;
+          top: 0;
+          margin-top: 16px;
+    }
 
-body
-{
-    font-family:monospace;
-}
+    nav ul {
+          max-height: 0px;
+          background: #000;
+    }
 
-.row
-{
-    max-width:1200px;
-    margin: auto;
-}
+    nav.black ul {
+          background: #000;
+    }
 
-.question
-{
-    position: absolute;
-    width: 1200px;
-    margin-left: 0px;
-    margin-top: 0px;
-}
+    .showing {
+          max-height: 34em;
+    }
 
-h1
-{
-    color:white;
-    text-transform: uppercase;
-    font-size: 70px;
-    text-align: center;
-    margin-top: 275px;
-    margin-left:175px;
+    nav ul li {
+          box-sizing: border-box;
+          width: 100%;
+          padding: 24px;
+          text-align: center;
+    }
 
-}
+    .menu-icon {
+          display: block;
+    }
 
-.button
-{
-    margin-top: 30px;
-    margin-left: 440px;
-}
-.btn
-{
-    border: 1px solid white;
-    padding:10px 30px;
-    color: white;
-    text-decoration:none;
-    margin-right: 5px;
-    font-size: 13px;
-    text-transform:uppercase;
-}
-.btn-one
-{
-    font-family: "Roboto", sans-serif;
-}
-.btn-one:hover
-{
-    background-color: darkorange;
-    transition: all 0.5s ease-in;
-}
-.btn-two
-{
-    font-fmaily:"Roboto", sans-serif;
-    text-transform: uppercase;
-}
-.btn-two:hover
-{
-    background-color: darkorange;
-    transition: all 0.5s ease-in;
 }
